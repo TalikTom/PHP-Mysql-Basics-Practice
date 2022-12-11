@@ -22,5 +22,23 @@ for ($i = 1; $i < 10; $i++) {
 <p><?= $greeting ?></p>
 <h2><?= $product ?> Discounts</h2>
 
+<table>
+    <tr>
+        <th>Packs</th>
+        <th>Price</th>
+    </tr>
+    <?php foreach ($totals as $quantity => $price) { ?>
+        <tr>
+            <td>
+                <?= $quantity ?>
+                pack<?= ($quantity === 1) ? '' : 's' ?>
+            </td>
+            <td>
+                $<?= $price ?>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
+
 
 <?php require 'includes/footer.php'; ?>
