@@ -17,4 +17,10 @@ for ($i = 1; $i < 10; $i++) {
 ?>
 
 <?php require 'includes/header.php'; ?>
+
+
+<p><?= $greeting ?></p>
+<h2><?= $product ?> Discounts</h2>
+
+
 <?php require 'includes/footer.php'; ?>
