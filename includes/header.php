@@ -13,3 +13,8 @@
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
     </nav>
+    <p>Mints : <?= calculate_total(2,5) ?></p>
+    <p>Toffee : <?= calculate_total(2,5) ?></p>
+    <p>Fudge : <?= calculate_total(2,5) ?></p>
+    <p>Prices include tax at: <?= $tax ?>%</p>
+

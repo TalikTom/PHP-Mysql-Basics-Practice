@@ -17,8 +17,19 @@ for ($i = 1; $i < 10; $i++) {
 
 function create_copyright() {
     $year = date('Y');
-    $message = '&copy; ' . $year;
+    $message = 'copy; ' . $year;
     return $message;
+}
+
+$tax = '20';
+
+function calculate_total($price, $quantity)
+{
+    $cost = $price * $quantity;
+    $tax = $cost * (20 / 100);
+    echo $tax;
+    $total = $cost + $tax;
+    return $total;
 }
 
 ?>
