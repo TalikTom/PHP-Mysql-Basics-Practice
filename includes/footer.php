@@ -1,5 +1,5 @@
 <footer>
-    &copy; <?= date('Y'); ?>
+    <?= create_copyright(); ?>
 </footer>
 </body>
 </html>

@@ -14,6 +14,13 @@ for ($i = 1; $i < 10; $i++) {
     $discount = ($subtotal / 100) * ($i * 4);
     $totals[$i] = $subtotal - $discount;
 }
+
+function create_copyright() {
+    $year = date('Y');
+    $message = '&copy; ' . $year;
+    return $message;
+}
+
 ?>
 
 <?php require 'includes/header.php'; ?>
@@ -28,15 +35,15 @@ for ($i = 1; $i < 10; $i++) {
         <th>Price</th>
     </tr>
     <?php foreach ($totals as $quantity => $price) { ?>
-        <tr>
-            <td>
-                <?= $quantity ?>
-                pack<?= ($quantity === 1) ? '' : 's' ?>
-            </td>
-            <td>
-                $<?= $price ?>
-            </td>
-        </tr>
+    <tr>
+        <td>
+            <?= $quantity ?>
+            pack<?= ($quantity === 1) ? '' : 's' ?> 
+        </td>
+        <td>
+            $<?= $price ?>
+        </td>
+    </tr>
     <?php } ?>
 </table>
 
