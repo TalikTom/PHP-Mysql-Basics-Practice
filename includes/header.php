@@ -44,3 +44,10 @@
             <td><?= calculate_running_total(5,3) ?></td>
         </tr>
     </table>
+
+<p>US <?= $us_price ?></p>
+<p>
+    UK &pound; <?= $global_prices['pound'] ?> |
+    EU &euro; <?= $global_prices['euro'] ?> |
+    JP &yen; <?= $global_prices['yen'] ?>
+</p>

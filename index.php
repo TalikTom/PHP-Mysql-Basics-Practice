@@ -43,6 +43,25 @@ function calculate_running_total($price, $quantity)
     return $running_total;
 }
 
+$us_price = 4;
+$rates = [
+    'uk' => 0.81,
+    'eu' => 0.93,
+    'jp' => 113.21,
+];
+
+function calculate_prices($usd, $exchange_rates)
+{
+    $prices = [
+        'pound' => $usd * $exchange_rates['uk'],
+        'euro' => $usd * $exchange_rates['eu'],
+        'yen' => $usd * $exchange_rates['jp'],
+    ];
+    return $prices;
+}
+
+$global_prices = calculate_prices($us_price, $rates);
+
 ?>
 
 <?php require 'includes/header.php'; ?>
