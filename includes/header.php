@@ -18,3 +18,29 @@
     <p>Fudge : <?= calculate_total(2,5) ?></p>
     <p>Prices include tax at: <?= $tax ?>%</p>
 
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Running total</th>
+        </tr>
+        <tr>
+            <td>Mints</td>
+            <td>$2</td>
+            <td>5</td>
+            <td><?= calculate_running_total(2,5) ?></td>
+        </tr>
+        <tr>
+            <td>Toffee</td>
+            <td>$3</td>
+            <td>4</td>
+            <td><?= calculate_running_total(3,4) ?></td>
+        </tr>
+        <tr>
+            <td>Fudge</td>
+            <td>$5</td>
+            <td>3</td>
+            <td><?= calculate_running_total(5,3) ?></td>
+        </tr>
+    </table>
