@@ -31,6 +31,7 @@ function calculate_total($price, $quantity)
     $total = $cost + $tax;
     return $total;
 }
+//global and static variables;
 $tax_rate = 0.2;
 
 function calculate_running_total($price, $quantity)
@@ -42,6 +43,8 @@ function calculate_running_total($price, $quantity)
     $running_total = $running_total + $total + $tax;
     return $running_total;
 }
+
+//returning multiple values
 
 $us_price = 4;
 $rates = [
@@ -61,6 +64,21 @@ function calculate_prices($usd, $exchange_rates)
 }
 
 $global_prices = calculate_prices($us_price, $rates);
+
+//several returns in a function
+
+$stock = 4;
+
+function get_stock_message($stock)
+{
+    if ($stock >= 10) {
+        return 'Good stock';
+    }
+    if ($stock > 0 && $stock < 10) {
+        return 'Low stock';
+    }
+    return 'Out of stock';
+}
 
 ?>
 
