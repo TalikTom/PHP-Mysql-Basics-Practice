@@ -15,6 +15,11 @@ for ($i = 1; $i < 10; $i++) {
     $totals[$i] = $subtotal - $discount;
 }
 
+function create_copyright() {
+    echo '&copy;';
+    echo date('Y');
+}
+
 //global scope
 $tax = '20';
 
