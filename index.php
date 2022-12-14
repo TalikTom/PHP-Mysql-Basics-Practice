@@ -111,7 +111,7 @@ function get_total_value(float $price, int $quantity): float
     return $price * $quantity;
 }
 
-function get_tax_due(float $price, $int $quantity, int $tax = 0): float
+function get_tax_due(float $price, int $quantity, int $tax = 0): float
 {
     return ($price * $quantity) * ($tax / 100);
 }

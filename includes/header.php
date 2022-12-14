@@ -66,4 +66,11 @@
         <th>Total value</th>
         <th>Tax due</th>
     </tr>
+    <?php foreach ($candy as $product_name => $data) { ?>
+        <tr>
+            <td><?= $product_name ?></td>
+            <td><?= $data['stock'] ?></td>
+        </tr>
+
+    <?php  } ?>
 </table>
