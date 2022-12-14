@@ -70,6 +70,9 @@
         <tr>
             <td><?= $product_name ?></td>
             <td><?= $data['stock'] ?></td>
+            <td><?= get_reorder_message($data['stock']) ?></td>
+            <td>$<?= get_total_value($data['price'], $data['stock']) ?></td>
+            <td>$<?= get_tax_due($data['price'], $data['stock'], $tax) ?></td>
         </tr>
 
     <?php  } ?>
