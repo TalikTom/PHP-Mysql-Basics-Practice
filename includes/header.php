@@ -57,3 +57,13 @@
 <p><?= calculate_cost(5,2,3) ?></p>
 <p><?= calculate_cost(5,2) ?></p>
 <p><?= calculate_cost(10,5,4) ?></p>
+
+<table>
+    <tr>
+        <th>Candy</th>
+        <th>Stock</th>
+        <th>Re-order</th>
+        <th>Total value</th>
+        <th>Tax due</th>
+    </tr>
+</table>

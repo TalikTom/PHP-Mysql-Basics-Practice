@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 $name = 'Luka';
 
 $greeting = 'Hello';
@@ -88,6 +90,32 @@ function calculate_cost($cost, $quantity, $discount = 0)
 }
 
 $cost = calculate_cost(5, 3);
+
+//example
+
+$candy = [
+    'Toffee' => ['price' => 3.00, 'stock' => 10],
+    'Bombone' => ['price' => 2.00, 'stock' => 30],
+    'Krema' => ['price' => 4.00, 'stock' => 6],
+];
+
+$porez = 20;
+
+function get_reorder_message(int $stanje): string
+{
+    return ($stanje < 10) ? 'Yes' : 'No';
+}
+
+function get_total_value(float $price, int $quantity): float
+{
+    return $price * $quantity;
+}
+
+function get_tax_due(float $price, $int $quantity, int $tax = 0): float
+{
+    return ($price * $quantity) * ($tax / 100);
+}
+
 
 ?>
 
