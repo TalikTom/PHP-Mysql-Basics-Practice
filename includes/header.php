@@ -51,5 +51,9 @@
     EU &euro; <?= $global_prices['euro'] ?> |
     JP &yen; <?= $global_prices['yen'] ?>
 </p>
+<p><?= $cost ?></p>
 
 <p><?= get_stock_message($stock) ?></p>
+<p><?= calculate_cost(5,2,3) ?></p>
+<p><?= calculate_cost(5,2) ?></p>
+<p><?= calculate_cost(10,5,4) ?></p>

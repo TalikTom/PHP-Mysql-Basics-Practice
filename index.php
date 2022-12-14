@@ -80,6 +80,15 @@ function get_stock_message($stock)
     return 'Out of stock';
 }
 
+//optional parameters and default values
+function calculate_cost($cost, $quantity, $discount = 0)
+{
+    $cost = $cost * $quantity;
+    return $cost - $discount;
+}
+
+$cost = calculate_cost(5, 3);
+
 ?>
 
 <?php require 'includes/header.php'; ?>
